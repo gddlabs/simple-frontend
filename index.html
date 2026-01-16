@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GDDlabs</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px;
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+
+    button {
+      margin-top: 24px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #00c6ff;
+      color: #000;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00a3d6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">Welcome to GDDlabs</h1>
+    <p>Building simple, clean, and powerful ideas.</p>
+    <button onclick="changeMessage()">Click Me</button>
+  </div>
+
+  <script>
+    function changeMessage() {
+      const title = document.getElementById("title");
+      title.textContent = "Thanks for visiting GDDlabs!";
+    }
+  </script>
+</body>
+</html>
