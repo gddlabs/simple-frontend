@@ -4,65 +4,84 @@
   <meta charset="UTF-8" />
   <title>GDDlabs</title>
   <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+ /* CSS Variables */
+:root {
+  --font-main: Arial, Helvetica, sans-serif;
+  --bg-gradient: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  --card-bg: rgba(0, 0, 0, 0.3);
+  --btn-bg: #00c6ff;
+  --btn-hover: #00a3d6;
+  --text-color: #fff;
+}
 
-    body {
-      height: 100vh;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-    }
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
 
-    .container {
-      text-align: center;
-      padding: 40px;
-      border-radius: 12px;
-      background: rgba(0, 0, 0, 0.3);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    }
+/* Layout */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-gradient);
+  color: var(--text-color);
+}
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 16px;
-    }
+/* Card */
+.container {
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  background: var(--card-bg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
 
-    p {
-      font-size: 1.1rem;
-      opacity: 0.85;
-      margin-bottom: 10px;
-    }
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
 
-    .note {
-      font-size: 0.9rem;
-      opacity: 0.7;
-      margin-top: 10px;
-    }
+p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  opacity: 0.85;
+}
 
-    button, .link-btn {
-      margin-top: 24px;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      background-color: #00c6ff;
-      color: #000;
-      transition: background-color 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-    }
+.note {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-top: 10px;
+}
 
-    button:hover, .link-btn:hover {
-      background-color: #00a3d6;
-    }
+/* Buttons & Links */
+button,
+.link-btn {
+  margin-top: 24px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: var(--btn-bg);
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+.link-btn:hover {
+  background: var(--btn-hover);
+}
+
   </style>
 </head>
 <body>
